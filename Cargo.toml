@@ -37,8 +37,8 @@ assets = [
 
 # binbinbinbinbinbinbinbinbin chik aaaaaaaaaaaaaaaaaaaaaaaaaaaaa a 19 (~=~~~~~~)
 [profile.release]
-opt-level = 3
+opt-level = "z"
 lto = true
 panic = "abort"
-codegen-units = 1
+codegen-units = 16
 debug = false
