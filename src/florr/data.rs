@@ -29,7 +29,6 @@ impl Node {
 
     pub fn file(path: &str, content: &str) -> Self {
         let name = path.split('/').last().unwrap_or(path);
-        println!("{path}");
         Node::File(File {
             id: path.to_string(),
             name: name.to_string(),

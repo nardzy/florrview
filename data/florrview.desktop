@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=FlorrView
+Icon=florrview
+Exec=florrview
+StartupWMClass=florrview
+Comment=An simple client.wasm viewer
+Type=Application
+Categories=Utility;
+Path=/usr/bin

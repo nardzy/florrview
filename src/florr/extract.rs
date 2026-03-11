@@ -194,7 +194,7 @@ pub fn extract_wasm(path: &PathBuf) -> Result<Vec<Asset>, DynError> {
                 let (
                     count,
                     value
-                ) = read_leb(&bin, at, at + 4);
+                ) = read_leb(&bin, at, at + 5);
                 args[arg_i] = value as u32;
                 arg_i += 1;
                 at += count;

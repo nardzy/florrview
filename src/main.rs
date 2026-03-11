@@ -1,21 +1,22 @@
-
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-
-use std::sync::Arc;
+#![windows_subsystem = "windows"]
 
 mod florr;
+
 use eframe::NativeOptions;
-use egui::FontFamily;
+use egui::{FontFamily, ViewportBuilder};
 use florr::core::Florr;
-// ptr 300
 
 fn main() -> eframe::Result<()> {
-    let icon_data = eframe::icon_data::from_png_bytes(include_bytes!("../data/favicon.png"))
-        .expect("invalid icon data");
-    let mut options = NativeOptions::default();
-    options.viewport.icon = Some(Arc::new(icon_data));
+    let options = NativeOptions {
+        viewport: ViewportBuilder::default()
+            .with_app_id("florrview")
+            .with_icon(eframe::icon_data::from_png_bytes(include_bytes!("../data/florrview.png")).expect("whaa?")),
+        ..Default::default()
+    };
+    let version = env!("CARGO_PKG_VERSION");
+    let app_name = format!("FlorrView v{version}");
     eframe::run_native(
-        "FlorrView",
+        &app_name,
         options,
         Box::new(|ctx| {
             let mut fonts = egui::FontDefinitions::default();

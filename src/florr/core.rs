@@ -17,8 +17,10 @@ pub struct Florr {
 
 impl Florr {
     pub fn new() -> Self {
+        let file_dialog = FileDialog::new()
+            .initial_directory(dirs::download_dir().unwrap_or_default());
         Self {
-            file_dialog: FileDialog::new().default_file_filter("wasm"),
+            file_dialog,
             file_path: None,
             tree: Node::dir("Root", Vec::new()),
             tree_view_state: TreeViewState::default(),
