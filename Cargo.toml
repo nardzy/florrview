@@ -35,10 +35,10 @@ assets = [
     ["data/florrview.desktop", "usr/share/applications/", "644"]
 ]
 
-# :v maybe...
-# [profile.release]
-# opt-level = 3
-# lto = true
-# panic = "abort"
-# codegen-units = 1
-# debug = false
+# binbinbinbinbinbinbinbinbin chik aaaaaaaaaaaaaaaaaaaaaaaaaaaaa a 19 (~=~~~~~~)
+[profile.release]
+opt-level = 3
+lto = true
+panic = "abort"
+codegen-units = 1
+debug = false
